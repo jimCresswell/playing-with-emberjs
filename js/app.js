@@ -12,6 +12,7 @@
 
     App.Router.map(function() {
         this.route('about', {path: '/aboutus'});
+        this.route('credits');
     });
 
 }(window.Ember));
