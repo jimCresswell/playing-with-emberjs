@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/application.css">
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/handlebars/handlebars.min.js"></script>
@@ -21,10 +21,26 @@
   </head>
   <body>
     <!-- Handlebars! -->
-    <script type="text/x-handlebars">
-      <div class="navbar"></div>
-      <div class="container">Howdy.</div>
-      <footer class="container"></footer>
+    <script type="text/x-handlebars" data-template-name="application">
+      {{!-- jshint ignore:start --}}
+      <div class='navbar navbar-default'>
+        <div class='container'>
+          <a href='#' class='navbar-brand'><img src='images/logo.png' alt='logo' height='34' width='224' /></a>
+          <ul class='nav navbar-nav navbar-right'>
+            <li class='active' href='#/'><a >Home</a></li>
+            <li><a href='#/about'>About</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class='container'>
+        <h1>Welcome to The Flint &amp; Flame!</h1>
+      </div>
+      <footer class='container'>
+        <hr />
+        <p class='pull-left'>&copy; 2013 The Flint &amp; Flame</p>
+        <p class='pull-right'><a href='#/credits'>Credits</a></p>
+      </footer>
+      {{!-- jshint ignore:end --}}
     </script>
   </body>
 </html>
