@@ -1,0 +1,21 @@
+{
+  "name": "playing-with-emberjs",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Playing with Ember.js",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "ember": "~1.9.1",
+    "ember-data": "~0.0.14",
+    "bootstrap": "~3.3.1"
+  }
+}
