@@ -26,10 +26,10 @@
       {{!-- jshint ignore:start --}}
       <div class='navbar navbar-default'>
         <div class='container'>
-          <a href='#' class='navbar-brand'><img src='images/logo.png' alt='logo' height='34' width='224' /></a>
+          {{#link-to 'index' class='navbar-brand'}}<img src='images/logo.png' alt='logo' height='34' width='224' />{{/link-to}}
           <ul class='nav navbar-nav navbar-right'>
-            <li class='active'><a href='#/'>Home</a></li>
-            <li><a href='#/aboutus'>About</a></li>
+            <li class='active'>{{#link-to 'index'}}Home{{/link-to}}</li>
+            <li>{{#link-to 'about'}}About{{/link-to}}</li>
           </ul>
         </div>
       </div>
@@ -37,7 +37,7 @@
       <footer class='container'>
         <hr />
         <p class='pull-left'>&copy; 2013 The Flint &amp; Flame</p>
-        <p class='pull-right'><a href='#/credits'>Credits</a></p>
+        <p class='pull-right'>{{#link-to 'credits'}}Credits{{/link-to}}</p>
       </footer>
       {{!-- jshint ignore:end --}}
     </script>
@@ -62,7 +62,13 @@
       {{!-- jshint ignore:end --}}
     </script>
 
-    <!-- Hack! Update the active class on nav links.-->
+    <!--
+      Hack! Update the active class on Bootstrap nav links.
+      Ember will set the active class on the link
+      element, and this can be set to be an li, but
+      then the links stop being semantic. Best solution,
+      don't use Bootstrap.
+    -->
     <script>
       "use strict";
       /* global $ */
