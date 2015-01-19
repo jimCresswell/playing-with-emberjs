@@ -62,7 +62,13 @@
       {{!-- jshint ignore:end --}}
     </script>
 
-    <!-- Hack! Update the active class on nav links.-->
+    <!--
+      Hack! Update the active class on Bootstrap nav links.
+      Ember will set the active class on the link
+      element, and this can be set to be an li, but
+      then the links stop being semantic. Best solution,
+      don't use Bootstrap.
+    -->
     <script>
       "use strict";
       /* global $ */
