@@ -15,4 +15,8 @@
         this.route('credits');
     });
 
+    App.IndexController = Ember.Controller.extend({
+        productsCount: 6
+    });
+
 }(window.Ember));
