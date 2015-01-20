@@ -10,6 +10,7 @@
         LOG_TRANSITIONS: true,
     });
 
+    // 'index' route is implicit.
     App.Router.map(function() {
         this.route('about', {path: '/aboutus'});
         this.route('credits');
