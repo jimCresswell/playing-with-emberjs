@@ -46,6 +46,9 @@
     <script type="text/x-handlebars" data-template-name="index">
       {{!-- jshint ignore:start --}}
       <h1>Welcome to the Flint & Flame!</h1>
+      <p>There are {{productsCount}} products.</p>
+      <img {{bind-attr src='logo'}} alt='logo' />
+      <p>Rendered on {{time}}</p>
       {{!-- jshint ignore:end --}}
     </script>
 

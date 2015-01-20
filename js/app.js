@@ -10,9 +10,18 @@
         LOG_TRANSITIONS: true,
     });
 
+    // 'index' route is implicit.
     App.Router.map(function() {
         this.route('about', {path: '/aboutus'});
         this.route('credits');
+    });
+
+    App.IndexController = Ember.Controller.extend({
+        productsCount: 6,
+        logo: '/images/logo.png',
+        time: function() {
+            return (new Date()).toDateString();
+        }.property()
     });
 
 }(window.Ember));
