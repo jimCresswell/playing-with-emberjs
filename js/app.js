@@ -24,4 +24,16 @@
         }.property()
     });
 
+    App.AboutController = Ember.Controller.extend({
+      contactName: 'Jim',
+      avatar: './images/contacts/patty.png',
+      open: function () {
+        var day = (new Date()).getDay();
+        if (day === 0) {
+            return 'Sorry, we are closed on Sundays';
+        }
+        return 'We are open!';
+      }.property()
+    });
+
 }(window.Ember));
