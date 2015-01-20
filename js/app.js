@@ -17,7 +17,8 @@
     });
 
     App.IndexController = Ember.Controller.extend({
-        productsCount: 6
+        productsCount: 6,
+        logo: '/images/logo.png'
     });
 
 }(window.Ember));
