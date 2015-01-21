@@ -30,6 +30,7 @@
           <ul class='nav navbar-nav navbar-right'>
             <li class='active'>{{#link-to 'index'}}Home{{/link-to}}</li>
             <li>{{#link-to 'about'}}About{{/link-to}}</li>
+            <li>{{#link-to 'products'}}Products{{/link-to}}</li>
           </ul>
         </div>
       </div>
@@ -59,6 +60,24 @@
       <p>Contact {{contactName}}</p>
       <img {{bind-attr src='avatar'}} />
       <p>{{open}}</p>
+      {{!-- jshint ignore:end --}}
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="products">
+      {{!-- jshint ignore:start --}}
+      <h1>Products</h1>
+      <ul class='list-unstyled'>
+      {{#each product in model.products}}
+        <li class='row'>
+          <img {{bind-attr src='product.image'}} class='img-thumbnail col-sm-5'/>
+          <div class='col-sm-7'>
+            <h2>{{product.title}}</h2>
+            <p class='product-description'>{{product.description}}</p>
+            <p><button class='btn btn-success'>Buy for ${{product.price}}</button></p>
+          </div>
+        </li>
+      {{/each}}
+      </ul>
       {{!-- jshint ignore:end --}}
     </script>
 
